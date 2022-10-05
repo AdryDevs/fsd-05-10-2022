@@ -69,20 +69,110 @@
 
 // Ejercicio DNI
 
-let num = parseInt(prompt("Introduce el número de dni"));
+// let num = parseInt(prompt("Introduce el número de dni"));
 
-let letra = prompt("Introduce la letra del DNI");
+// let letra = prompt("Introduce la letra del DNI");
 
-let array = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T"];
+// let array = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T"];
 
-const div = 23;
+// const div = 23;
 
-letra = letra.toUpperCase();
+// letra = letra.toUpperCase();
 
-let pos = num%23;
+// let pos = num%23;
 
-if (letra == array[pos]) {
-    console.log("Es correcto")
-} else {
-    console.log("No es correecto")
-};
+// if (letra == array[pos]) {
+//     console.log("Es correcto")
+// } else {
+//     console.log("No es correecto")
+// };
+
+
+// Ahora que te salga la letra que debería ser
+
+// console.log(num,array[pos]);
+
+// Objetos
+
+// let carlos = ["Carlos", 27, "Valencia", "Videojuegos"]; //esto sería en un array y no es práctico, para eso hacemos objetos y valores de estos.
+
+// let alumnoCarlos = {
+//     nombre: "Carlos",
+//     edad: 27,
+//     ciudad: "Valencia",
+//     hobbie: ["videojuegos", "películas", "leer", "viajar"],
+//     amigos: {
+//         amigo1: "José",
+//         amigo2: "Marta",
+//         amigo3: {
+//             nombreAmigo3: "Mara",
+//             hobbieAmigo3: {
+//                 hobbieMara1: "Leer",
+//                 hobbieMara2: "Viajar"
+//             }
+//         }
+//     }
+// };
+
+// console.log(alumnoCarlos.ciudad);
+// console.log(alumnoCarlos.amigos.amigo3);
+
+
+// Ejercicio Entradas de Cine
+
+let edad = parseInt(prompt("Introduce tu edad."));
+let pelicula = prompt("¿Qué película quieres ver?").toLowerCase();
+
+let objetoPeliculas = {
+    pelicula1: {
+        titulo: "el rey leon",
+        edad: 3
+    },
+    pelicula2: {
+        titulo: "soy leyenda",
+        edad: 13
+    },
+    pelicula3: {
+        titulo: "la marca del demonio",
+        edad: 18
+    },
+    pelicula4: {
+        titulo: "a todo gas",
+        edad: 8
+    }
+}
+
+switch (pelicula) {
+    case "el rey leon":
+        if (edad >= objetoPeliculas.pelicula1.edad) {
+            console.log("Puedes ver la película");
+        } else {
+            console.log("No puedes ver la película");
+        }
+        break;
+    case "soy leyenda":
+        if (edad >= objetoPeliculas.pelicula2.edad) {
+            console.log("Puedes ver la película");
+        } else {
+            console.log("No puedes ver la película");
+        }
+        break;
+    case "la marca del demonio":
+        if (edad >= objetoPeliculas.pelicula3.edad) {
+            console.log("Puedes ver la película");
+        } else {
+            console.log("No puedes ver la película");
+        }
+        break;
+    case "a todo gas":
+        if (edad >= objetoPeliculas.pelicula4.edad) {
+            console.log("Puedes ver la película");
+        } else {
+            console.log("No puedes ver la película");
+        }
+        break;
+    default:
+        console.log("Esa película no está disponible");
+        break;
+}
+
